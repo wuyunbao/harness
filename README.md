@@ -15,3 +15,15 @@ environment. Install EvoHarness itself in editable mode:
 ```bash
 pip install -e .
 ```
+
+## Single-task V0 smoke run
+
+Use an existing AppWorld simplified function-calling experiment config and
+override only its registered agent type:
+
+```bash
+python -m evoharness.runner --source-experiment <official-appworld-experiment-name> --experiment-name evoharness_v0_smoke --task-id <appworld-task-id>
+```
+
+The command delegates task loading and execution to AppWorld's official
+simplified runner. It does not run evaluation automatically.
